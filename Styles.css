@@ -1,79 +1,104 @@
-﻿body
-{
-    background-color: #FFFFFF;
+﻿:root{
+    background-color: #d0d8ff;
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3b3c36;
+}
+
+h1, h2, h3, h4{
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 5.4rem;
+    color: #6A60ab;
+    margin-bottom: 5rem;
 
 }
 
-.top{
+h1>span{
+    font-size: 2.4rem;
+    font-weight:500;
+}
+
+h2{
+    font-size: 4.2rem;
+    margin-bottom:4rem;
+    font-weight:700;
+}
+
+h3{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+/*Utilities*/
+
+.container{
+    width: 100vw;
+    height: 100vw;
     display: flex;
-}
-
-.grid{
-    width: 600px;
-    height: 500px;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
     margin: 0 auto;
-    background-color: lightcyan;
-    padding: 10px;
-    border: 2px solid #808080;
+}
+
+.container>*{
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+flex-center {
+    justify-content: center;
+    align-items: center;
 
 }
 
-.highscore{
-    font-family: sans-serif;
-    font-size: 18px;
-}
-
-.grid h1{
-    font-family: "sans-serif";
-    background-color: #01BBFF;
-    font-size: 40px;
+.justify-center{
     text-align: center;
-    color: #ffffff;
-    padding: 2px 0px;
 }
 
-.score{
-    color: black;
+.hidden{
+    display:none;
+
+}
+
+/*Buttons*/
+
+.btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
     text-align: center;
-    font-size: 20px;
-
+    border: .1rem solid #6A60ab;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #6a60ab;
+    background-color: antiquewhite;
 }
 
-.grid #question{
-    font-family: "monospace";
-    font-size: 30px;
-    color: #01BBFF;
-}
-
-.buttons{
-    margin: 30px;
-    padding: 40px;
-
-}
-
-.quizContainer {
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 6;
-
-}
-
-#btn0 #btn2 #btn3 #btn1 #btn4 {
-    background-color: darkturquoise;
-    width: 250px;
-    font-size: 20px;
-    color: #ffffff;
-    border: 1px solid #1D3c6A;
-    margin: 10px 40px 10px 0px;
-    padding: 10px 10px;
-}
-
-#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover{
+.btn:hover {
     cursor: pointer;
-    background-color: #01BBFF;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(106,96,171, 0.5);
+    transform: translateY(-.1rem);
+    transition: transform 150ms;
+}
 
+.btn[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
-#progress{
-    color: #2b2b2b;
-    font-size: 20px;
-}
+
