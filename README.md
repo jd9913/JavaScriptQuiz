@@ -1,8 +1,15 @@
 # JavaScript Quiz
 
 
-##Live Website:
+This quiz tests knowledge through the use of HTML, CSS, JavaScript and JSON.
+
+
+# Github Repository
+http://github.com/jd9913/JavaScriptQuiz.git
+
+# Live Website
 https://jd9913.github.io/JavaScriptQuiz/
 
-## GitHub Repository
-http://github.com/jd9913/JavaScriptQuiz.git
+# Screenshot
+
+
