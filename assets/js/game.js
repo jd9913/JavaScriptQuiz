@@ -2,7 +2,11 @@ var question = document.getElementById('question');//referring back to the appro
 var choices = Array.from(document.getElementsByClassName('choice-text')); //an array that creates the choice variables corresponding to the answer areas
 var timerEl = document.getElementById('timer');
 var correctEl = document.getElementById('correctAnswer');
+
 var incorrectEl = document.getElementById('incorrectAnswer');
+var questionCounterText = document.getElementById('questionCounter');
+var highscoreText = document.getElementById('score');
+
 
 var currentQuestion = {};
 var acceptingAnswers = false;  //makes it so the user can't select answers until the page is finished loading
@@ -85,6 +89,9 @@ getNewQuestion = () => {
     }
 
     questionCounter++;
+    questionCounterText.innerText = `${questionCounter} / ${max_questions}`;
+
+
     var questionIndex = Math.floor(Math.random() * availableQuestion.length);
     currentQuestion = availableQuestion[questionIndex];
     question.innerText = currentQuestion.question;
@@ -128,8 +135,10 @@ choices.forEach((choice) => {
 
         if (selectedAnswer == currentQuestion.answer) {
             correctEl.innerText = 'Correct!';
+            incrementScore(correct_bonus);//add a bonus to every correct answer
         } else {
             incorrectEl.innerText = 'Incorrect!';
+            timeLeft--; //subtract 1 second from time remaining for every incorrect answer
         }
         setTimeout(() => {
             correctEl = '';
@@ -141,6 +150,12 @@ choices.forEach((choice) => {
             
     });
 });
+
+incrementScore = num => {
+    score += num;
+    highscoreText.innerText = score;
+
+};
 
 
 

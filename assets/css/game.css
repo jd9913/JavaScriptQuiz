@@ -25,20 +25,13 @@
         padding: 1.5rem;
         width: 100%;
     }
-    .countdown{
-        justify-content:end;
-        align-items: end;
-        text-align: center;
-    }
-
+ 
     .feedbackContainer{
         display: flex;
         justify-content: center;
         background-color: var(--lightLavender);
         width: 100%;
         padding: 5rem;
-
-
     }
     
     .correct{
@@ -57,4 +50,34 @@
         font-size: 4rem;
         text-align: center;
         background-color: var(--antiqueWhite);
+    }
+
+    #hud{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        padding: 0 0 10rem 0;
+    }
+
+    .hud-item{
+        margin: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .hud-prefix{
+        text-align: center;
+        font-size: 2rem;
+
+    }
+    .hud-main-text{
+        text-align: center;
+    }
+    #timer{
+        color: var(--darkLavender);
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .hud-main-text{
+        text-align: center;
     }
