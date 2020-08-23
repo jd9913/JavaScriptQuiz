@@ -15,23 +15,59 @@ var questionCounter = 0;  //counting number of questions user has
 var availableQuestion = [];//array that starts with all avaiable questions and removes each as the user answers--so there is always a unique question for the user.
 var timeLeft = 20;
 
-var questions = [];
+var questions = [
+    {
+        question: "what is a Javascript algorithm that performs each step in some order, one by one?",
+        choice1: "random",
+        choice2: "recursive",
+        choice3: "iterative",
+        choice4: "dyanamic",
+        answer: 3,
+    },
+    {
+        question: "What will array.push(item...) do?",
+        choice1: "push an item off the end of an array",
+        choice2: "create a string in an array",
+        choice3: "compare two arrays",
+        choice4: "append the item to the end of an array",
+        answer: 4,
+    },
+    {
+        question: "what is the correct syntax for referring to a Javascript file from HTML?",
+        choice1: "<script src='./source.js'></script>",
+        choice2: "<script href='./source.js'></script>",
+        choice3: "<link rel=javascript href='./source.js'/>",
+        choice4: "<script file='./source.js'></script>",
+        answer: 1,
+    },
+    {
+        question: "what does string.charAt(pos) do?",
+        choice1: "cooks the variables",
+        choice2: "returns the value charcol",
+        choice3: "returns the character at position pos in this string",
+        choice4: "returns the number of characters in the string",
+        answer: 3,
 
-fetch('questions.JSON')  //fetch API to get the questions
-    .then((res) => {
-        return res.json();
-    })
-    .then((loadedQuestions) => {
-        questions = loadedQuestions;
-        startGame();
-    })
-    .catch((err) => {
-        console.error(err);
+    },
+    {
+        question: "what does an event-listener do in Javascript?",
+        choice1: "returns an event after the code has run",
+        choice2: "'listens' for an user input on the HTML page such as a click from a mouse button",
+        choice3: "gives the user choices to do something on the HTML page",
+        choice4: "part of the DOM that helps link the Javascript and the HTML page",
+        answer: 2,
 
-    });
+    },
+    {
+        question: "what does DOM stand for?",
+        choice1: "Dynamic Object Model",
+        choice2: "Document Object Model",
+        choice3: "Details of the moment",
+        choice4: "Dynamic Obtainable Moment",
+        answer: 2,
+    }
 
-
-//constants
+];
 
 var correct_bonus = 2; //how much time is added for every correct answer
 var max_questions = 3; //the number of max questions a user gets for every round of the game.
@@ -114,6 +150,7 @@ choices.forEach((choice) => {
 
         }, 500);
 
+
     });
 });
 
@@ -125,3 +162,4 @@ incrementScore = num => {
 
 
 
+startGame();

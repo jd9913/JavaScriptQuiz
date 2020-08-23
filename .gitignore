@@ -1,3 +1,8 @@
 
+<<<<<<< HEAD
 .vs/slnx.sqlite
 .vs/JavaScriptQuiz/config/applicationhost.config
+=======
+.vs/JavaScriptQuiz/config/applicationhost.config
+.vs/slnx.sqlite
+>>>>>>> feature/load_highScores
