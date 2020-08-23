@@ -19,7 +19,6 @@
         padding: 1.5rem 2.5rem;
         background-color: var(--darkLavender);
         color: var(--antiqueWhite);
-
     }
 
     .choice-text{
@@ -30,4 +29,32 @@
         justify-content:end;
         align-items: end;
         text-align: center;
+    }
+
+    .feedbackContainer{
+        display: flex;
+        justify-content: center;
+        background-color: var(--lightLavender);
+        width: 100%;
+        padding: 5rem;
+
+
+    }
+    
+    .correct{
+        
+        color: #28a745;
+        font-weight: bold;
+        font-size: 4rem;
+        text-align: center;
+        background-color: var(--antiqueWhite);
+    }
+
+    .incorrect{
+        
+        color: #dc3545;
+        font-weight: bold;
+        font-size: 4rem;
+        text-align: center;
+        background-color: var(--antiqueWhite);
     }

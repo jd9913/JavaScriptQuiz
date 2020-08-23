@@ -1,6 +1,8 @@
 var question = document.getElementById('question');//referring back to the appropriate area in the HTML game page
 var choices = Array.from(document.getElementsByClassName('choice-text')); //an array that creates the choice variables corresponding to the answer areas
 var timerEl = document.getElementById('timer');
+var correctEl = document.getElementById('correctAnswer');
+var incorrectEl = document.getElementById('incorrectAnswer');
 
 var currentQuestion = {};
 var acceptingAnswers = false;  //makes it so the user can't select answers until the page is finished loading
@@ -109,7 +111,7 @@ countdown = () => {
         } else {
             timerEl.textContent = '';
             clearInterval(timeInterval);
-            endGame();
+            getNewQuestion()
         }
     }, 1000);
 
@@ -120,13 +122,25 @@ choices.forEach((choice) => {
         if (!acceptingAnswers) return;
 
         acceptingAnswers = false;
+
         var selectedChoice = e.target;
         var selectedAnswer = selectedChoice.dataset['number'];
-        getNewQuestion();
+
+        if (selectedAnswer == currentQuestion.answer) {
+            correctEl.innerText = 'Correct!';
+        } else {
+            incorrectEl.innerText = 'Incorrect!';
+        }
+        setTimeout(() => {
+            correctEl = '';
+            incorrectEl = '';
+            getNewQuestion();
+
+        }, 500);
+
+            
     });
 });
-
-//endGame = () => {}
 
 
 
