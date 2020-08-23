@@ -17,7 +17,7 @@ var timeLeft = 20;
 
 var questions = [];
 
-fetch('questions.JSON')  //fetch API to get the questions
+fetch('questions.json')  //fetch API to get the questions
     .then((res) => {
         return res.json();
     })
