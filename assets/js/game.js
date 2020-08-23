@@ -15,9 +15,23 @@ var questionCounter = 0;  //counting number of questions user has
 var availableQuestion = [];//array that starts with all avaiable questions and removes each as the user answers--so there is always a unique question for the user.
 var timeLeft = 20;
 
-var questions = [
-    
-];
+var questions = [];
+
+fetch('questions.JSON')  //fetch API to get the questions
+    .then((res) => {
+        return res.json();
+    })
+    .then((loadedQuestions) => {
+        questions = loadedQuestions;
+        startGame();
+    })
+    .catch((err) => {
+        console.error(err);
+
+    });
+
+
+//constants
 
 var correct_bonus = 2; //how much time is added for every correct answer
 var max_questions = 3; //the number of max questions a user gets for every round of the game.
@@ -100,7 +114,6 @@ choices.forEach((choice) => {
 
         }, 500);
 
-            
     });
 });
 
@@ -112,4 +125,3 @@ incrementScore = num => {
 
 
 
-startGame();
