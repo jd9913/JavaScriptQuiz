@@ -3,9 +3,43 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Javascript Quiz--Play Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./game.css" />
 </head>
 <body>
 
+    <div class="countdown">
+        <h2 id="timer"></h2>
+    </div>
+
+    <div class="container">
+
+        <div id="game" class="justify-center flex-column">
+            <h2 id="question">Select the correct answer to this question.</h2>
+
+            <div class="choice-container">
+                <p class="choice-prefix">a</p>
+                <p class="choice-text" data-number="1">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">b</p>
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">c</p>
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">d</p>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./game.js"></script>
 </body>
 </html>
