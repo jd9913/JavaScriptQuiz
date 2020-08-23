@@ -10,6 +10,6 @@ http://github.com/jd9913/JavaScriptQuiz.git
 # Live Website
 https://jd9913.github.io/JavaScriptQuiz/
 
-# Screenshot
+
 
 
